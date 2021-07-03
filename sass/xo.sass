@@ -1,15 +1,75 @@
 .container
     margin: 0 auto
     width: 100%
+    min-height: 900px
+
+h1
+    text-align: center
 
 .main
-    background: url("img/main.png") center
-
+    position: relative
+    min-height: 800px
+    background: url('../img/main.png') center no-repeat
+    .cell
+        position: absolute
+        cursor: pointer
+    .cell_1
+        left: 28%
+        top: 6%
+        width: 200px
+        height: 200px
+    .cell_2
+        left: 43%
+        top: 6%
+        width: 200px
+        height: 200px
+    .cell_3
+        left: 58%
+        top: 6%
+        width: 200px
+        height: 200px
+    .cell_4
+        left: 28%
+        top: 35%
+        width: 200px
+        height: 200px
+    .cell_5
+        left: 42%
+        top: 35%
+        width: 200px
+        height: 200px
+    .cell_6
+        left: 58%
+        top: 35%
+        width: 200px
+        height: 200px
+    .cell_7
+        left: 27%
+        top: 63%
+        width: 200px
+        height: 200px
+    .cell_8
+        left: 42%
+        top: 63%
+        width: 185px
+        height: 200px
+    .cell_9
+        left: 56%
+        top: 63%
+        width: 200px
+        height: 200px
 .X
     display: none
     img
-        width: 100%
+        width: 90%
 .O
     display: none
     img 
-        width: 100%
+        width: 80%
+
+.visible
+    display: block
+
+button
+    width: 100px
+    height: 50px
