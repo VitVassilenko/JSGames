@@ -10,6 +10,7 @@ function Oplay () {
         e.preventDefault();
         console.log(e.target);
         item.lastElementChild.classList.add ("visible");
+        item.firstElementChild.classList.remove("visible");
     });
     });
 }
@@ -20,6 +21,7 @@ function Xplay () {
         e.preventDefault();
         console.log(e.target);
         item.firstElementChild.classList.add ("visible");
+        item.lastElementChild.classList.remove("visible");
     });
     });
 }
@@ -30,6 +32,8 @@ function clearAll () {
         item.lastElementChild.classList.remove("visible");
     });
 }
+
+
 
 button1.addEventListener('click', Oplay);
 button2.addEventListener('click', Xplay);
