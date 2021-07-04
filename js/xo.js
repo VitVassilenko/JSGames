@@ -6,7 +6,8 @@ const cells = document.querySelectorAll('.cell'),
 
  
 let field = [[0, 0, 0], [0, 0, 0], [0, 0, 0]],
-    player = 1;
+    player = 1,
+    counter = 1;
 
     
 function playerClick () {
@@ -19,6 +20,13 @@ function playerClick () {
             cell.classList.add(`player_${player}`);
             if (checkWin()) {
                 alert(`Победил игрок ${player}`);
+                let ans = confirm('Начать новую игру?');
+                if (ans) {
+                    clearAll();
+                } else {
+                    alert('Новая игра!');
+                    clearAll();
+                }
             }
             if (player == 1) {
                player = 2; 
@@ -27,6 +35,16 @@ function playerClick () {
             }
         } 
         console.log(field);
+        counter++;
+        document.querySelector('.counter').textContent = counter;
+        if (counter == 10) {
+            let ans = confirm('Ничья! Начать новую игру?');
+            if (ans) {
+                clearAll();
+            } else {
+                clearAll();
+            }
+        }
         });
     }
     );
@@ -37,7 +55,7 @@ function checkWin () {
         return true;
     } else if (field[1][0]!== 0 && field[1][0] == field[1][1] && field[1][0] == field[1][2]) {
         return true;
-    } else if (field[2][0]!== 0 && field[2][0] == field[2][1] && field[1][0] == field[2][2]) {
+    } else if (field[2][0]!== 0 && field[2][0] == field[2][1] && field[2][0] == field[2][2]) {
         return true;
     } else if (field[0][0]!== 0 && field[0][0] == field[1][0] && field[0][0] == field[2][0]) {
         return true;
@@ -63,6 +81,8 @@ function clearAll () {
     });
     field = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
     player = 1;
+    counter = 1;
+    document.querySelector('.counter').textContent = counter;
 }
 
 
