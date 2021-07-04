@@ -1,71 +1,94 @@
+body
+    position: relative
+
 .container
     margin: 0 auto
     width: 100%
-    min-height: 900px
+    background: url('../img/bg.jpg') center no-repeat
+    background-size: cover 
+
+.wrapper
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    button
+        width: 100px
+        border-radius: 15px
+        background: #082dfdde
+        opacity: 0.8
+        &:hover
+            opacity: 1
+
+p
+    font-size: 25px
+    span
+        font-size: 30px
 
 h1
     text-align: center
 
 .main
     position: relative
-    min-height: 800px
+    min-height: 570px
     background: url('../img/main.png') center no-repeat
+    background-size: contain
     .cell
         position: absolute
         cursor: pointer
     .player_1
-        background: url('../img/X.png') center
+        background: url('../img/X.png')  center no-repeat
+        background-size: contain
     .player_2
-        background: url('../img/O.png') center
+        background: url('../img/O.png') center no-repeat
+        background-size: contain
     .cell_1
         left: 28%
-        top: 6%
-        width: 200px
-        height: 200px
+        top: 4%
+        width: 150px
+        height: 150px
     .cell_2
-        left: 43%
-        top: 6%
-        width: 200px
-        height: 200px
+        left: 44%
+        top: 4%
+        width: 150px
+        height: 150px
     .cell_3
-        left: 58%
-        top: 6%
-        width: 200px
-        height: 200px
+        left: 60%
+        top: 3.5%
+        width: 150px
+        height: 150px
     .cell_4
         left: 28%
-        top: 35%
-        width: 200px
-        height: 200px
+        top: 38%
+        width: 150px
+        height: 150px
     .cell_5
-        left: 42%
-        top: 35%
-        width: 200px
-        height: 200px
+        left: 44%
+        top: 38%
+        width: 150px
+        height: 150px
     .cell_6
-        left: 58%
-        top: 35%
-        width: 200px
-        height: 200px
+        left: 59%
+        top: 38%
+        width: 150px
+        height: 150px
     .cell_7
-        left: 27%
-        top: 63%
-        width: 200px
-        height: 200px
+        left: 28%
+        top: 73%
+        width: 150px
+        height: 150px
     .cell_8
-        left: 42%
-        top: 63%
-        width: 185px
-        height: 200px
+        left: 45%
+        top: 73%
+        width: 150px
+        height: 150px
     .cell_9
-        left: 56%
-        top: 63%
-        width: 200px
-        height: 200px
+        left: 60%
+        top: 73%
+        width: 150px
+        height: 150px
 .X
     display: none
-    img
-        width: 90%
+    
 .O
     display: none
     img 
@@ -75,8 +98,45 @@ h1
     display: block
     z-index: 2
 
-
-
+.modal
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, 0.5)
+    z-index: 100
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    &__content
+        padding: 16px
+        background-color: #fff
+        margin: 0 auto
+        border-radius: 15px
+        .buttons
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            button
+                width: 100px
+                border-radius: 15px
+            .confirm_1
+                background-color: #79fa00de
+                opacity: 0.7
+                &:hover
+                    opacity: 1
+            .confirm_2
+                background-color: #ff1111f3
+                opacity: 0.7
+                &:hover
+                    opacity: 1
+        
 button
     width: 100px
     height: 50px
+
+
+.hide 
+    display: none

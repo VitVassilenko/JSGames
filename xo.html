@@ -5,15 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/xo.min.css">
 </head>
 <body>
     <div class="container">
         <h1>Крестики-нолики</h1>
-            <button id="new_game">Новая игра</button>
-            <button id="1_player">1 Игрок (O)</button>
-            <button id="2_player">2 Игрок (X)</button>
+        <div class="wrapper">           
             <p>Ход номер:<span class="counter">1</span></p>
+            <button id="new_game">Новая игра</button>
+            <p>Счёт: <span class="goal_1">0</span> : <span class="goal_2">0</span> </p>
+        </div>
+            
         <div class="main">
             <div class="cell cell_1">
                 <div class="X"><img src="img/X.png" alt=""></div>
@@ -52,6 +55,16 @@
                 <div class="O"><img src="img/O.png" alt=""></div>
             </div>
 
+            
+        </div>
+    </div>
+    <div class="modal hide">
+        <div class="modal__content">
+            <p>Нравится ли вам игра?</p>
+            <div class="buttons">
+                <button class="confirm_1">Ок</button>
+                <button class="confirm_2">Отмена</button>
+            </div>
             
         </div>
     </div>
