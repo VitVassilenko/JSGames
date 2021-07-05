@@ -34,7 +34,7 @@ function playerClick () {
                     changeGoals();
                     let ans = confirm2('Начать новую игру?');
                     console.log(ans);
-                    if (ans) {
+                    if (ans == true) {
                         clearAll();
                     }
                 }
@@ -46,7 +46,7 @@ function playerClick () {
             if (counter == 10) {
                 let ans = confirm2('Ничья! Начать новую игру?');
                 console.log(ans);
-                if (ans) {
+                if (ans == true) {
                     clearAll();
                 } 
             }
@@ -92,6 +92,7 @@ async function confirm2 (question, type = 'confirm') {
     ok.addEventListener('click', (e) => {
         modalBlock.classList.add('hide');
         // console.log(true);
+        clearAll();
         return true;
     });
     cancel.addEventListener('click', (e) => {

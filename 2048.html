@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/2048.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <h1>2048</h1>
+            <div class="buttons">
+                <button class="cancel">Отменить ход</button>
+                <button class="new">Новая игра</button>
+            </div>
+            <div class="score">Текущий счёт: <span class="score-number">0</span></div>
+            <div class="high__score">Лучший счёт: <span class="high-number">0</span></div>
+        </div>
+        
+        <div class="main__block">
+            <div class="mini__block num-2"><span class="number">2</span></div>
+            <div class="mini__block num-4"><span class="number">4</span></div>
+            <div class="mini__block num-8"><span class="number">8</span></div>
+            <div class="mini__block num-16"><span class="number">16</span></div>
+            <div class="mini__block num-32"><span class="number">32</span></div>
+            <div class="mini__block num-64"><span class="number">64</span></div>
+            <div class="mini__block num-128"><span class="number">128</span></div>
+            <div class="mini__block num-256"><span class="number">256</span></div>
+            <div class="mini__block num-512"><span class="number">512</span></div>
+            <div class="mini__block num-1024"><span class="number">1024</span></div>
+            <div class="mini__block num-2048"><span class="number">2048</span></div>
+            <div class="mini__block num-"><span class="number"></span></div>
+            <div class="mini__block"><span class="number"></span></div>
+            <div class="mini__block"><span class="number"></span></div>
+            <div class="mini__block"><span class="number"></span></div>
+            <div class="mini__block"><span class="number"></span></div>
+        </div>
+    </div>
+
+    <div class="modal hide">
+        <div class="modal__content">
+            <span class="question"></span>
+            <div class="buttons">
+                <button class="confirm_1">Ок</button>
+                <div class="space"></div>
+                <button class="confirm_2">Отмена</button>
+            </div>
+            
+        </div>
+    </div>
+    
+    <script src="js/2048.js"></script>
+</body>
+</html>

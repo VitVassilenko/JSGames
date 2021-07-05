@@ -1,0 +1,177 @@
+
+
+
+
+*
+    font-family: Roboto    
+    
+body
+    background-color: #ff9d42
+
+.container
+    margin: 0 auto
+    width: 80%
+    height: 100vh
+    display: flex
+    flex-direction: row-reverse
+    justify-content: space-between
+
+.wrapper
+    margin-top: 20px
+    margin-right: 50px
+    h1
+        font-size: 120px
+    .buttons
+        margin-top: 20px
+        display: flex
+        justify-content: space-around
+        button
+            width: 120px
+            height: 50px
+            border-radius: 15px
+            background: #4b4948
+            opacity: 0.9
+            text-decoration: none
+            color: #dbcfba
+            &:hover
+                opacity: 1
+                background-image: none
+            &:focus
+                box-shadow: none
+                outline: none
+    .score
+        margin-top: 50px
+        text-align: center
+        font-size: 25px
+    .high__score
+        margin-top: 15px
+        text-align: center
+        font-size: 25px
+
+
+.main__block
+    margin-top: 50px
+    width: 600px
+    height: 600px
+    background-color: #4b4948
+    border-radius: 15px
+    display: flex
+    justify-content: space-around
+    align-content: space-around
+    flex-wrap: wrap
+    
+    .mini__block
+        width: 140px
+        height: 140px
+        background-color: #d3c09d
+        border-radius: 15px
+        text-align: center
+        padding: 10px
+
+    .num-2
+        background-color: #eee2ca
+        font-size: 80px
+        color: #503d25
+        
+
+    .num-4
+        background-color: #fde0a0
+        font-size: 80px
+        color: #503d25
+
+    .num-8
+        background-color: #ffcb5c
+        font-size: 80px
+        color: #503d25
+
+    .num-16
+        background-color: #fcba2d
+        font-size: 80px
+        color: #503d25
+        
+    .num-32
+        background-color: #fc912d
+        font-size: 80px
+        color: #503d25
+        
+    .num-64
+        background-color: #fc562d
+        font-size: 80px
+        color: #503d25
+        
+    .num-128
+        background-color: #ecc441
+        font-size: 78px
+        color: #503d25
+        padding: 11px 0
+        
+    .num-256
+        background-color: #f7c931
+        font-size: 78px
+        color: #503d25
+        padding: 11px 0
+        
+    .num-512
+        background-color: #fde71e
+        font-size: 78px
+        color: #503d25
+        padding: 11px 0
+        
+    .num-1024
+        background-color: #1abff1
+        font-size: 60px
+        color: #503d25
+        padding: 25px 0
+        
+    .num-2048
+        background-color: #1a65f1
+        font-size: 60px
+        color: #503d25
+        padding: 25px 0
+        
+
+.modal
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    background-color: rgba(0, 0, 0, 0.7)
+    z-index: 100
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    &__content
+        padding: 20px
+        background-color: #ff9d42
+        margin: 0 auto
+        border-radius: 15px
+        font-size: 25px
+        text-align: center
+        color: #503d25
+        .buttons
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            margin-top: 15px
+            .space
+                margin: 0 30px 
+            button
+                width: 120px
+                height: 50px
+                border-radius: 15px
+                background: #4b4948
+                opacity: 0.9
+                text-decoration: none
+                color: #dbcfba
+                &:hover
+                    opacity: 1
+                    background-image: none
+                &:focus
+                    box-shadow: none
+                    outline: none
+           
+
+.hide
+    display: none
