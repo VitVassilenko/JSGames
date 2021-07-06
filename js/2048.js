@@ -10,6 +10,3 @@ let score = document.querySelector('.score-number'),
     highScore = document.querySelector('.high-number'),
     question = document.querySelector('.question');
 
-blocks.forEach((block) => {
-    
-});
