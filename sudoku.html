@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/sudoku.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Судоку</h1>
+            <div class="field">
+                <div class="block block1">
+                    <div class="miniBlock miniBlock1 const"></div>
+                    <div class="miniBlock miniBlock2"></div>
+                    <div class="miniBlock miniBlock3"></div>
+                    <div class="miniBlock miniBlock4"></div>
+                    <div class="miniBlock miniBlock5"></div>
+                    <div class="miniBlock miniBlock6"></div>
+                    <div class="miniBlock miniBlock7"></div>
+                    <div class="miniBlock miniBlock8"></div>
+                    <div class="miniBlock miniBlock9"> </div>
+                </div>
+
+                <div class="block block2">
+                    <div class="miniBlock miniBlock1"></div>
+                    <div class="miniBlock miniBlock2"></div>
+                    <div class="miniBlock miniBlock3"></div>
+                    <div class="miniBlock miniBlock4"></div>
+                    <div class="miniBlock miniBlock5"></div>
+                    <div class="miniBlock miniBlock6"></div>
+                    <div class="miniBlock miniBlock7"></div>
+                    <div class="miniBlock miniBlock8"></div>
+                    <div class="miniBlock miniBlock9"></div>
+                </div>
+                <div class="block block3">
+                    <div class="miniBlock miniBlock1"></div>
+                    <div class="miniBlock miniBlock2"></div>
+                    <div class="miniBlock miniBlock3"></div>
+                    <div class="miniBlock miniBlock4"></div>
+                    <div class="miniBlock miniBlock5"></div>
+                    <div class="miniBlock miniBlock6"></div>
+                    <div class="miniBlock miniBlock7"></div>
+                    <div class="miniBlock miniBlock8"></div>
+                    <div class="miniBlock miniBlock9"></div>
+                </div>
+                <div class="block block4">
+                    <div class="miniBlock miniBlock1"></div>
+                    <div class="miniBlock miniBlock2"></div>
+                    <div class="miniBlock miniBlock3"></div>
+                    <div class="miniBlock miniBlock4"></div>
+                    <div class="miniBlock miniBlock5"></div>
+                    <div class="miniBlock miniBlock6"></div>
+                    <div class="miniBlock miniBlock7"></div>
+                    <div class="miniBlock miniBlock8"></div>
+                    <div class="miniBlock miniBlock9"></div>
+                </div>
+                <div class="block block5">
+                    <div class="miniBlock miniBlock1"></div>
+                    <div class="miniBlock miniBlock2"></div>
+                    <div class="miniBlock miniBlock3"></div>
+                    <div class="miniBlock miniBlock4"></div>
+                    <div class="miniBlock miniBlock5"></div>
+                    <div class="miniBlock miniBlock6"></div>
+                    <div class="miniBlock miniBlock7"></div>
+                    <div class="miniBlock miniBlock8"></div>
+                    <div class="miniBlock miniBlock9"></div>
+                </div>
+                <div class="block block6">
+                    <div class="miniBlock miniBlock1"></div>
+                    <div class="miniBlock miniBlock2"></div>
+                    <div class="miniBlock miniBlock3"></div>
+                    <div class="miniBlock miniBlock4"></div>
+                    <div class="miniBlock miniBlock5"></div>
+                    <div class="miniBlock miniBlock6"></div>
+                    <div class="miniBlock miniBlock7"></div>
+                    <div class="miniBlock miniBlock8"></div>
+                    <div class="miniBlock miniBlock9"></div>
+                </div>
+                <div class="block block7">
+                    <div class="miniBlock miniBlock1"></div>
+                    <div class="miniBlock miniBlock2"></div>
+                    <div class="miniBlock miniBlock3"></div>
+                    <div class="miniBlock miniBlock4"></div>
+                    <div class="miniBlock miniBlock5"></div>
+                    <div class="miniBlock miniBlock6"></div>
+                    <div class="miniBlock miniBlock7"></div>
+                    <div class="miniBlock miniBlock8"></div>
+                    <div class="miniBlock miniBlock9"></div>
+                </div>
+                <div class="block block8">
+                    <div class="miniBlock miniBlock1"></div>
+                    <div class="miniBlock miniBlock2"></div>
+                    <div class="miniBlock miniBlock3"></div>
+                    <div class="miniBlock miniBlock4"></div>
+                    <div class="miniBlock miniBlock5"></div>
+                    <div class="miniBlock miniBlock6"></div>
+                    <div class="miniBlock miniBlock7"></div>
+                    <div class="miniBlock miniBlock8"></div>
+                    <div class="miniBlock miniBlock9"></div>
+                </div>
+                <div class="block block9">
+                    <div class="miniBlock miniBlock1"></div>
+                    <div class="miniBlock miniBlock2"></div>
+                    <div class="miniBlock miniBlock3"></div>
+                    <div class="miniBlock miniBlock4"></div>
+                    <div class="miniBlock miniBlock5"></div>
+                    <div class="miniBlock miniBlock6"></div>
+                    <div class="miniBlock miniBlock7"></div>
+                    <div class="miniBlock miniBlock8"></div>
+                    <div class="miniBlock miniBlock9"></div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="number choisen number1">1</button>
+                <button class="number number2">2</button>
+                <button class="number number3">3</button>
+                <button class="number number4">4</button>
+                <button class="number number5">5</button>
+                <button class="number number6">6</button>
+                <button class="number number7">7</button>
+                <button class="number number8">8</button>
+                <button class="number number9">9</button>
+            </div>
+            <button class="erase">Erase</button>
+    </div>
+    <div class="modal hide">
+        <div class="modal__content">
+            <span class="question"></span>
+            <div class="buttons">
+                <button class="confirm_1">Ок</button>
+                <div class="space"></div>
+                <button class="confirm_2">Отмена</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/sudoku.js"></script>
+</body>
+</html>

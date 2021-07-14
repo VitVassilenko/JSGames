@@ -1,0 +1,86 @@
+body
+	background-color: gray
+
+.hide
+	color: white
+
+h1
+	text-align: center
+	color: white
+
+.container
+	width: 900px
+	margin: 0 auto
+	display: grid
+	justify-items: center
+	align-items: center
+
+.field
+	background-color: #000
+	display: grid
+	width: 364px
+	height: 364px
+	grid-template-columns: 1fr 1fr 1fr
+	grid-template-rows: 1fr 1fr 1fr
+	grid-gap: 4px
+	border-radius: 16px
+	border: 2px solid black
+	margin-bottom: 24px
+
+.block
+	background-color: #000
+	border-radius: 8px
+	display: grid
+	grid-template-columns: 1fr 1fr 1fr
+	grid-template-rows: 1fr 1fr 1fr
+
+.miniBlock
+	background-color: #fff
+	border: 1px solid black
+	text-align: center
+	font-size: 32px
+	vertical-align: center
+	border-radius: 4px
+
+.buttons
+	display: flex
+	width: 100%
+	justify-content: space-between
+
+.number
+	width: 48px
+	height: 48px
+	background-color: #ccc
+	font-size: 24px
+	color: #009
+	border-radius: 8px
+	cursor: pointer
+
+	&:hover
+		color: #00f
+		background-color: #fff
+
+.choisen
+	background-color: #00f
+	color: #fff
+
+	&:hover
+		background-color: #00f
+		color: #fff
+
+.miniBlock
+  	color: rgba(150, 150, 150, 1)
+
+.const
+	color: #000
+	font-weight: bold
+
+.erase
+	padding: 8px
+	font-size: 16px
+	color: #fff
+	background-color: #aaa
+
+.eraseOn
+	color: red
+	background-color: #900
