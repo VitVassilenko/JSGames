@@ -2,6 +2,7 @@ body
 	background-color: gray
 
 .hide
+	display: none
 	color: white
 
 h1
@@ -23,7 +24,7 @@ h1
 	grid-template-columns: 1fr 1fr 1fr
 	grid-template-rows: 1fr 1fr 1fr
 	grid-gap: 4px
-	border-radius: 16px
+	border-radius: 10px
 	border: 2px solid black
 	margin-bottom: 24px
 
@@ -44,7 +45,7 @@ h1
 
 .buttons
 	display: flex
-	width: 100%
+	width: 80%
 	justify-content: space-between
 
 .number
@@ -76,11 +77,23 @@ h1
 	font-weight: bold
 
 .erase
+	margin-top: 15px
 	padding: 8px
 	font-size: 16px
 	color: #fff
-	background-color: #aaa
+	background-color: #999999
+	border-radius: 8px
 
 .eraseOn
 	color: red
 	background-color: #900
+
+.on-main
+	position: absolute
+	top: 90%
+	right: 3%
+	padding: 5px
+	font-size: 16px
+	color: #fff
+	background-color: #999999
+	border-radius: 8px

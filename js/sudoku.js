@@ -17,9 +17,37 @@ let erase = false;
 
 function inputNumbers(){
     const miniBlocks = document.querySelectorAll('.miniBlock');
-    miniBlocks.forEach((miniBlock,index)=>{
-        let i = (index- index%9)/9;
-        let j = index%9;
+    // miniBlocks.forEach((miniBlock, index)=>{
+    //     let i = (index - index%9)/9;
+    //     let j = index%9;
+    //     miniBlock.addEventListener('click',()=>{
+    //         if(!erase){
+    //             let bool = true;
+    //             for(let ii=0;ii<9;ii++){
+    //                 if(field[i][ii]==number){
+    //                     alert(`Поле ${(i)} ${(ii)} занято таким же числом`);
+    //                     bool =false;
+    //                 }
+    //                 console.log(field[i][j]);
+    //             }
+    //             if(bool){
+
+    //                 field[i][j]=number;
+    //                 miniBlock.textContent = number;
+    //                 console.log(field);
+    //             }
+
+    //         }else{
+    //              field[i][j]=0;
+    //             miniBlock.textContent = '';
+    //             console.log(field);
+    //         }
+    //     });
+    // });
+    miniBlocks.forEach((miniBlock, index)=>{
+        let i = ((index - index%9)/9);
+        let j = Math.floor((index%3) +(index/9));
+        console.log(i);
         miniBlock.addEventListener('click',()=>{
             if(!erase){
                 let bool = true;
