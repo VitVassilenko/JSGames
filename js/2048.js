@@ -1,6 +1,7 @@
 "use strict";
 
-const blocks = document.querySelectorAll('.mini__block'),
+const mainBlock = document.querySelector('.main__block'),
+      blocks = document.querySelectorAll('.mini__block'),
       newBtn = document.querySelector('.new'),
       cancBtn = document.querySelector('.cancel');
 
@@ -41,5 +42,35 @@ function blocksRender() {
         }
     }
 }
+
+function randomizer () {
+    let randIndex = Math.floor(Math.random()*16),
+        i = (randIndex - randIndex%4) /4,
+        j = randIndex%4,
+        index = i*4+j,
+        block = mainBlock.querySelectorAll('.mini__block')[index];
+        if (field[i][j] == 0) {
+            field[i][j] = 2;
+            block.innerHTML = `<span class="number">2</span>`;
+            block.classList.add(`num-${field[i][j]}`);
+        } else {
+            randomizer();
+        }
+}
+
+document.addEventListener('click', (e) =>{
+    let target = e.target;
+    if (target==newBtn) {
+        document.querySelector('.main__block').innerHTML='';
+        for (let i = 0; i <= 15; i++) {
+            // let newBlock = document.createElement('DIV');
+            // newBlock.classList.add('mini__block');
+            mainBlock.insertAdjacentHTML('afterbegin','<div class="mini__block"><span class="number"></span></div>');
+        }
+       
+    }
+     
+    randomizer();
+});
 
 blocksRender();

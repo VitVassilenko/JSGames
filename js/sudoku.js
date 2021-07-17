@@ -102,7 +102,6 @@ function inputNumbers(){
 
 
 async function randomizer() {
-    // let r = 0;
     for (let r = 1; r <= 35; r++) {
         let randIndex = Math.floor(Math.random()*80),
               randNum = Math.ceil(Math.random()*9);
@@ -153,10 +152,7 @@ function checking (num) {
     
 }
 
-console.log(check);
+
 
 randomizer();
 inputNumbers();
-// checking();
-// check = checking();
-// console.log(check);
