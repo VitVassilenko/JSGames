@@ -60,14 +60,16 @@ function randomizer () {
 
 document.addEventListener('click', (e) =>{
     let target = e.target;
-    if (target==newBtn) {
+    if (target.classList.contains('new')) {
         document.querySelector('.main__block').innerHTML='';
         for (let i = 0; i <= 15; i++) {
             // let newBlock = document.createElement('DIV');
             // newBlock.classList.add('mini__block');
             mainBlock.insertAdjacentHTML('afterbegin','<div class="mini__block"><span class="number"></span></div>');
-        }
+        } 
        
+    } else {
+        return;
     }
      
     randomizer();
