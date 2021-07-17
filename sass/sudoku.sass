@@ -21,14 +21,12 @@ h1
 	display: grid
 	width: 364px
 	height: 364px
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 
-	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
-	grid-gap: 1.5px
-	border-radius: 10px
-	border: 2px solid black
+	grid-template-columns: repeat(9, 1fr)
+	grid-template-rows: repeat(9, 1fr)
+	grid-gap: 2px
+	border-radius: 8px
+	border: 2.5px solid black
 	margin-bottom: 24px
-	
-		
 
 
 .block
@@ -41,13 +39,15 @@ h1
 .miniBlock
 	color: #7e7e7e
 	background-color: #fff
-	border: 1px solid black
+	border: 2px solid black
 	text-align: center
 	font-size: 30px
 	border-radius: 4px
 	cursor: pointer
-	&:nth-child(3n)
-		border-right: 25px
+	// &:nth-child(3n)
+	// 	margin-right: 4px
+	// &:nth-child(9n)
+	// 	margin-right: 1px
 
 .buttons
 	display: flex
