@@ -46,19 +46,19 @@ function inputNumbers(){
             if(!erase){
                 let bool = true;
                 if (miniBlock.classList.contains('const')) {
-                    alert('Вы не можете изменить эту цифру!');
+                    modalWindow('Вы не можете изменить эту цифру!', 'alert');
                     bool=false;
                 } else {
                     for(let ii=0;ii<9;ii++){
                     if(field[i][ii]==number){
-                        alert(`Поле ${(i)}:${(ii)} занято таким же числом`);
+                        modalWindow(`Поле ${(i)}:${(ii)} занято таким же числом`, `alert`);
                         bool =false;
                     }
                     console.log(field[i][j]);
                 }
                 for(let jj=0;jj<9;jj++){
                     if(field[jj][j]==number){
-                        alert(`Поле ${(jj)}:${(j)} занято таким же числом`);
+                        modalWindow(`Поле ${(jj)}:${(j)} занято таким же числом`, `alert`);
                         bool =false;
                     }
                 }
@@ -72,7 +72,7 @@ function inputNumbers(){
 
             }else{
                 if (miniBlock.classList.contains('const')) {
-                    alert('Вы не можете удалить эту цифру!');
+                    modalWindow('Вы не можете удалить эту цифру!', 'alert');
                 } else {
                     field[i][j]=0;
                     miniBlock.textContent = '';
@@ -101,7 +101,7 @@ function inputNumbers(){
 }
 
 
-async function randomizer() {
+function randomizer() {
     for (let r = 1; r <= 35; r++) {
         let randIndex = Math.floor(Math.random()*80),
               randNum = Math.ceil(Math.random()*9);
@@ -139,20 +139,40 @@ async function randomizer() {
 }
 
 
-function checking (num) {
-    for (let i=0; i<9; i++) {
-        for (let j=0; j<9; j++) {
-        if (field[i][j] == 0) {
-            return true;
-        } else {
-            return false;
+async function modalWindow (question, type = 'confirm') {
+    let modal = document.querySelector('.modal'),
+        space = modal.querySelector('.space'),
+        ok = document.querySelector('.confirm_1'),
+        cancel = document.querySelector('.confirm_2');
+    modal.querySelector('.question').textContent = question;
+    if (type == 'alert') {
+        cancel.classList.add('hide');
+        space.classList.add('hide');
+        modal.querySelector('.buttons').style.justifyContent = 'center';
+    } else {
+        cancel.classList.remove('hide');
+        space.classList.add('hide');
+    }
+    modal.classList.remove('hide');
+    ok.addEventListener('click', (e) => {
+        modal.classList.add('hide');
+        return true;
+    });
+    cancel.addEventListener('click', (e) => {
+        modal.classList.add('hide');
+        return false;
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.code === 'Escape' && !modal.classList.contains('hide'))  {
+            modal.classList.add('hide');
         }
-    }
-    }
-    
+    });
+    modal.addEventListener('click', (e) => {
+        if(e.target === modal) {
+            modal.classList.add('hide');
+        }
+    });
 }
-
-
 
 randomizer();
 inputNumbers();

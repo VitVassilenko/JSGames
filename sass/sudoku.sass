@@ -1,9 +1,6 @@
 body
 	background-color: gray
 
-.hide
-	display: none
-	color: white
 
 h1
 	text-align: center
@@ -106,3 +103,57 @@ h1
 .const
 	color: #000
 	font-weight: bold
+
+.modal
+	position: fixed
+	top: 0
+	left: 0
+	width: 100vw
+	height: 100vh
+	background-color: #2b2b2bbb
+	z-index: 100
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	&__content
+		padding: 20px
+		background-color: gray
+		margin: 0 auto
+		border-radius: 10px
+		font-size: 25px
+		text-align: center
+		color: #fff
+		.buttons
+			width: 100%
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			margin-top: 15px
+			.space
+				margin: 0 30px 
+			button
+				width: 120px
+				height: 40px
+				border-radius: 15px
+				background-color: #999999
+				opacity: 0.9
+				text-decoration: none
+				color: #fff
+				.confirm_1 
+				&:hover
+					background-color: #fff
+					color: #575757
+					font-weight: bold
+				.confirm_2
+				&:hover
+					background-color: #fff
+					color: #575757
+					font-weight: bold
+				&:focus
+					box-shadow: none
+					outline: none
+		   
+
+.hide
+	display: none
